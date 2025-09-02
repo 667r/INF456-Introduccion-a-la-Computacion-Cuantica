@@ -1,0 +1,12 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}{section.1}% 
+\contentsline {section}{\numberline {2}State of the Art}{4}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Metodolog\IeC {\'\i }a}{4}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Descripci\IeC {\'o}n de trabajos nuevos}{4}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}An\IeC {\'a}lisis comparativo de los \IeC {\'u}ltimos avances}{4}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.4}Discusi\IeC {\'o}n bibliogr\IeC {\'a}fica}{5}{subsection.2.4}% 
+\contentsline {subsubsection}{\numberline {2.4.1}Cosas comunes}{5}{subsubsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.5}Modelos existentes}{6}{subsection.2.5}% 
+\contentsline {subsection}{\numberline {2.6}Resultados esperados o soprendentes}{6}{subsection.2.6}% 
+\contentsline {section}{\numberline {3}Conclusiones}{7}{section.3}% 
+\contentsline {section}{\numberline {4}Referencias}{7}{section.4}% 

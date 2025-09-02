@@ -1,0 +1,34 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Pence%
+}{%
+Pence%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+pence_what_2014}
+\APACinsertmetastar {%
+pence_what_2014}%
+\begin{APACrefauthors}%
+Pence, H\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{{\APACmonth{12}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {What is {Big} {Data} and {Why} is it {Important}?} {What
+  is {Big} {Data} and {Why} is it {Important}?}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Educational Technology
+  Systems}{43}{2}{159--171}.
+\newblock
+\begin{APACrefURL} [{2023-04-25}]\url{https://doi.org/10.2190/ET.43.2.d}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Publisher: SAGE Publications Inc}
+\newblock
+\begin{APACrefDOI} \doi{10.2190/ET.43.2.d} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

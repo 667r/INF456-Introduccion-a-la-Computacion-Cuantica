@@ -1,0 +1,192 @@
+% Formato de trabajos - Computación Cuantica - 2024-2
+% Autor: Iñaki Oyarzun Merino
+% Profesor: Mauricio Solar
+
+\documentclass[12pt]{article} % Tipo y tamaño de letra del documento.
+\usepackage[spanish]{babel} % Uso del español en las secciones predefinidas 
+\usepackage[hmargin=3cm, vmargin=3cm, bindingoffset=0.4cm]{geometry} % Márgenes del documento
+\usepackage{graphicx} % Para adjuntar imágenes
+\usepackage{fancyhdr} % Para modificar headers y footers de hoja
+\usepackage[natbibapa]{apacite} % Para insertar las citas en formato APA
+\usepackage[numbib,notlof,notlot,nottoc]{tocbibind} % Para el manejo de citas
+\usepackage[]{hyperref} % Generar links a las referencias y secciones del documento
+\usepackage{multirow} % Para el manejo de tablas
+\usepackage{adjustbox} % Para el ajuste de tamaños de tablas 
+\usepackage[table,xcdraw]{xcolor} % Para el cambio de colores a casillas de las tablas.
+
+\begin{document}
+
+% ==== Bibliografía - carga de archivo ====
+% Puede ingresar un archivo personalizado .bib, el cual en caso de utilizar otro nombre debe modificar aquí
+%1o Compilar con LATEX el documento «.tex». Ello hará que se genere un fichero de extensión «.aux», en el que se incluirá información sobre la BD a usar, el fichero de estilo a usar, y las referencias bibliográficas que hay que incluir en la lista de referencias.
+%2o Ejecutar, desde la línea de comandos, la orden «bibtex MiDoc». Ello hará que BIBTEX lea el fichero «.aux»13, generado por la anterior compilación del documento, extrayendo de él la información que necesita para trabajar: qué BD debe usar, qué estilo, y qué referencias hay que buscar en la base. Y así, tras extraer de la BD los registros precisos, y formatearlos de acuerdo con el estilo indicado, BIBTEX genera un fichero de extensión «.bbl» en el que se contienen los comandos de LATEX necesarios para escribir la lista de referencias bibliográficas que hay que insertar en el documento principal. BIBTEX genera también un fichero adicional, de extensión «.blg» que es un fichero «.log»14.
+%3o Compilar de nuevo el documento principal con LATEX. En esta segunda compilación, al leer la orden “\bibliography”, se insertará en su lugar el contenido.
+
+\bibliographystyle{apacite} 
+
+% Seccion de portada del documento
+\begin{titlepage}
+\centering
+\includegraphics[width=12cm, keepaspectratio]{Logo-dpto.png}
+\vspace{4cm}
+
+% ==== Título del documento ====
+\textbf{{\Huge Título del Survey a presentar}}
+
+\vspace{0.3cm}
+
+% ==== Autores =====
+\huge Nombre Autor 1 \\ Nombre Autor 2 \\ Nombre Autor 3
+\vspace{0.2cm}
+
+\rule{\textwidth}{1px}
+\vspace{0.5cm}
+\Large{Introducción a la Computación Cuántica\\Profesor Mauricio Solar}
+
+\vspace{7cm}
+
+% ===== Periodo académico ====
+{Segundo semestre de 2024}
+\end{titlepage}
+
+% Configuracion de headers y footers
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+% Personalización header
+\fancyhead[C]{}
+
+% Personalización footer
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{Versión 2.0}
+\fancyfoot[C]{Agosto 2024}
+
+% ==== Resumen Ejecutivo ====
+\section*{Resumen Ejecutivo}
+{El presente documento detalla aspectos que deben ser considerados al escribir un survey sobre el tema elegido por su grupo de trabajo.}
+
+% índice - NO MODIFICAR
+\newpage
+\tableofcontents
+\newpage
+
+% ==== Desarrollo del documento ====
+% Se recomienda hacer la división por medio de \section{}
+% para el manejo de citas, basta con referenciar a la cita de acuerdo
+% al título del identificador de la cita utilizando \cite{}
+% siendo agregado automáticamente a la bibliografía en formato APA
+
+\section{Introducción}
+{ En esta sección va la introducción del survey que se presenta en el caso del survey, o de la tarea que se implementó en qiskit. A continuación sólo va una cita como ejemplo \cite{pence_what_2014}, porque en esta sección se debe incorporar muchas citas que hacen referencia a la historia del trabajo que se presenta, a los avances que se ha tenido hasta el día de hoy en la literatura, cuáles son los problemas abiertos, y porqué es interesante leer el trabajo de este documento.\\
+
+En el caso del survey que les toca presentar, deben resumir, qué es lo que se presenta en ese survey, y luego indicar cuáles son los trabajos nuevos y recientes que encontraron en la literatura formal e informal. Formal son libros, artículos de revistas y documentos oficiales, e informal, son aquellos que aparecen generalmente en revistas no indexadas o en idiomas diferentes al inglés.\\
+}
+
+\newpage
+\section{State of the Art}
+\subsection{Metodología}
+{
+Indicar qué metodología se usó para recabar nueva información, como por ejemplo las BD que se usaron, palabras claves que se usaron, términos asociados, herramientas utilizadas, etc.
+
+Por ejemplo, la técnica mas utilizada es la de Snow Ball cuyo objetivo, es ir leyendo las citas de los papers mas recientes.
+Ver detalles sobre técnicas de búsqueda bibliográfica para la investigación en \url{https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1132-12962015000100028}.
+}
+
+
+
+\subsection{Descripción de trabajos nuevos}
+{ A continuación, serán parte del desarrollo de este documento, la presentación de cada trabajo encontrado en la literatura.
+
+No es recomendable hacer una itemización y descripción trabajo a trabajo, si no que que se puede agrupar por temáticas parecidas, por áreas, o cualquier clasificación que encuentre interesante y dentro de cada grupo se puede hacer una descripción de similitud o diferencia entre los trabajos descritos.
+
+Algo así como una narrativa trabajo a trabajo, pero encadenando la similitud o diferencia con el trabajo anterior. Por ejemplo:
+\begin{itemize}
+    \item \textbf{Artículo sobre tema 1: }
+    \begin{enumerate}
+        \item Una breve descripción de lo que se presenta en este artículo, y su aporte con respecto a los otros trabajos del estado del arte en este mismo grupo. Es el pionero en ...
+    \end{enumerate}
+    \item \textbf{Artículo sobre tema 2: }
+    \begin{enumerate}
+        \item Una breve descripción de lo que se presenta en este artículo, y su similitud o diferencia con el trabajo anterior.
+    \end{enumerate}
+\end{itemize}
+
+}
+
+\subsection{Análisis comparativo de los últimos avances}
+{
+Hacer una descripción sobre los ámbitos y diferencias entre los trabajos presentados en la literatura. Lo mejor para esta comparación es hacer una tabla que resuma las diferentes características de los aportes de cada artículo.
+
+Para la comparación de los aportes de cada artículo, usar una tabla comparativa como la Tabla \ref{table:1}
+
+\begin{table}[h]
+\label{table:1}
+\small{Tabla 1: Comparación de artículos.}
+
+\begin{adjustbox}{width=\columnwidth,center}
+\begin{tabular}{lll}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+\multicolumn{1}{c}{\cellcolor[HTML]{EFEFEF}
+\textbf{Autores Artículo}}                                                                                                               & \textbf{Aporte realizado}                                                                                                                                                                                                                                 & \textbf{Ventaja comparativa}              \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}autor 1 y 2\end{tabular}}                      & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}presenta el algoritmo más rápido del oeste\\ \end{tabular}}                                            & \multicolumn{1}{l|}{super rápido}   \\ \hline
+\multicolumn{1}{|l|}{autor 1,2 y 3}                                                                                                                        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}algoritmo de una línea.\end{tabular}} & \multicolumn{1}{l|}{super compacto}   \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}otros autores\end{tabular}}                             & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Algoritmo super inteligente con Coeficiente Intelectual de genio\end{tabular}}                & \multicolumn{1}{l|}{muy inteligente}      \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}autores varios\end{tabular}}    & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}algoritmo que aprende de las caídas\end{tabular}}                                                                  & \multicolumn{1}{l|}{super autodidacta}      \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}un único autor\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Un algoritmo que estudia y estudia, pero no aprende\end{tabular}}                                    & \multicolumn{1}{l|}{poco meritorio} \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}autor.\end{tabular}}                                                       & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}no aporta nada!!.\end{tabular}}                                                                                                            & \multicolumn{1}{l|}{sin comentarios}   \\ \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+\begin{center}
+\end{center}
+
+}
+
+\newpage
+\subsection{Discusión bibliográfica}
+{
+De la documentación consultada acerca de la problemática y el contexto de desarrollo de la búsqueda se ha logrado profundizar en cuanto los nuevos aportes y sus funcionalidades.
+
+\subsubsection{Cosas comunes}
+Se puede enumerar cosas comunes o diferencias entre los trabajos analizados: 
+
+\begin{itemize}
+    \item \textbf{Dif 1: } explicación 1.
+
+    \item \textbf{Dif 2: } explicación 2.
+
+    \item \textbf{Dif 3: } explicación 3.
+\end{itemize}
+
+Cabe mencionar que se tiene presente a su vez grupos de desarrollo focalizados a cada uno de los temas tratados. Es decir, en qué universidades o institutos trabajan estos grupos especializados, etc...
+
+}
+\newpage
+\subsection{Modelos existentes}
+{
+De las cosas que ya existían, muestre una línea del tiempo.
+}
+
+\subsection{Resultados esperados o soprendentes}
+{
+Se puede hablar de cosas absolutamente nuevas que se encontraron en la literatura.
+}
+
+\newpage
+\section{Conclusiones}
+{
+Concluir el trabajo de lo que se encontró en la literatura.
+}
+
+
+% ==== Bibliografía ====
+% La bibliografía será cargada automaticamente en cada compilación
+% por ende, no requiere que se modifique el comando. Sin embargo
+% en caso de hacer uso de otro archivo .bib, deberá cambiar el nombre
+% dentro de los paréntesis del comando.
+\bibliography{citas}
+
+\end{document}
